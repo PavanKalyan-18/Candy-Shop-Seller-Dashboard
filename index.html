@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candy Shop Seller Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container my-5">
+    <h2 class="text-center">Candy List</h2>
+    
+    <!-- Candy Form -->
+    <div class="card p-4 mb-4">
+      <form id="candy-form">
+        <div class="row mb-3">
+          <div class="col-md-3">
+            <label for="name" class="form-label">Candy Name</label>
+            <input type="text" id="name" class="form-control" required>
+          </div>
+          <div class="col-md-3">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" id="description" class="form-control" required>
+          </div>
+          <div class="col-md-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" id="price" class="form-control" required>
+          </div>
+          <div class="col-md-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="number" id="quantity" class="form-control" required>
+          </div>
+        </div>
+        <button type="submit" id="add_item"class="btn btn-primary">Add Candy</button>
+      </form>
+    </div>
+
+    <!-- Candy List -->
+    <div class="card p-4">
+      <h4 class="mb-3">Available Candies</h4>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Candy Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="candy-list">
+          <!-- Candy items will be added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
